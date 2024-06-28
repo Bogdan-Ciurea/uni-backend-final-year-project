@@ -1,0 +1,52 @@
+{
+  "listeners": [
+      {
+        "address": "127.0.0.1",
+        "port": 8080,
+        "https": false
+      }
+    ],
+    "app" : {
+      "threads_num": 0,
+      "document_root": "../",
+      "upload_path":"./files",
+      "client_max_body_size": "50M",
+      "file_types": [
+        "jpg", "jpeg", "png", "gif", "bmp", "txt", "doc",
+        "docx", "pdf", "xls", "xlsx", "ppt", "pptx", "html",
+        "htm", "xml", "mp3", "wav", "mp4", "mov", "flv", "zip",
+        "rar", "tar", "gz", "swf", "js", "css", "rtf", "psd",
+        "ai", "eps", "tiff", "tif", "svg", "eot", "ttf",
+        "otf", "woff", "woff2", "ico", "midi", "mid", "amr",
+        "aif", "aiff", "m4a", "m4v", "3gp", "3g2", "ogv", "webm",
+        "mkv"
+      ],
+      "max_connections": 100000
+  },
+  "ssl": {
+    "cert": "../certificates/server.crt",
+    "key": "../certificates/server.key"
+  },
+  "custom_config": {
+    "email": {
+      "server": "smtp.gmail.com",
+      "port": 587,
+      "email" : "revistacnnb@gmail.com",
+      "password" : "hnvhanusprllrlki"
+    },
+    "cassandra": {
+      "host": "127.0.0.1",
+      "port": 9042
+    },
+    "rsa_priv_key_jwt": "../certificates/jwt_priv_key.pem",
+    "rsa_pub_key_jwt": "../certificates/jwt_pub_key.pem",
+    "front_end_url": "http://127.0.0.1:3000",
+    "back_end_url": "http://127.0.0.1:8080"
+  },
+  "plugins": [
+    {
+      "name": "SMTPMail",
+      "dependencies": [],
+      "config": { }
+    }]
+}

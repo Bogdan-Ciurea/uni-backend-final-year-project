@@ -1,0 +1,5 @@
+school,id,changed_password,email,first_name,last_name,last_time_online,password,phone_nr,type
+1,99502675-9745-489e-b233-95d799ae26b4,False,bogdan.ciurea00@gmail.com,tescher_first,teacher_second,2023-04-19 18:07:42.000+0000,$2b$10$BDJ52Re5kCeGKuJZ4xOhAeQQD8.z2.qQnp/6LpYK3trkLCo6HreU2,+40733350380,1
+1,68a86e9c-3ae6-40e7-97bb-8d72b6758189,False,ciureabogdanalexandru@gmail.com,Bogdan,Ciurea,2023-02-20 11:40:46.000+0000,$2b$10$2im/upOgsXVKh2kAs26nN.Wp8Qatv6nVyMPP/Kjx..Eds1MCy1Lh6,+40733350380,2
+1,09a7367b-0375-4a34-b2b6-889d41b82c1c,True,revistacnnb@gmail.com,Alex,Jones,2023-04-20 19:39:00.000+0000,$2b$10$egrVD3r90U/iz5Yhb7e83.YWJpG024b2k6JubIyICJEA8Pwk.6DAS,+40733350380,2
+1,e9214c60-ab8f-11ed-ac97-61ba4170d016,True,admin@gmail.com,admin_first,admin_last,2023-04-21 13:49:14.000+0000,$2b$10$zOTcAPOEGmefRoDn2WUGwODh6ge3ClxGUNY3RFFo28KJZGx1MzKZu,+40725847139,0

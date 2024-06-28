@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "4f07f053-e5a2-4875-af57-3513250704f7",
+		"name": "User Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23616215"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ciureabogdanalexandru@yahoo.com\",\n    \"first_name\": \"tescher_first\",\n    \"last_name\": \"teacher_second\",\n    \"type\": \"TEACHER\",\n    \"phone_number\": \"+40733350380\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all users from school",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/users/e9214c60-ab8f-11ed-ac97-61ba4170d016",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"e9214c60-ab8f-11ed-ac97-61ba4170d016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\" : \"admin_first\",\n    \"last_name\" : \"admin_last\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users/e9214c60-ab8f-11ed-ac97-61ba4170d016",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"e9214c60-ab8f-11ed-ac97-61ba4170d016"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"school_id\": 1,\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTIyMDUsImlhdCI6MTY3NzYxNjIwNSwiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiIwN204dTRMSDNGYTJvTFM4WHZzMEZNVUJHR2JTVlRSRSJ9.ts9QljnpkCF9_WjpdvMekvPYxptToOa8j7DRpgHG6SA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

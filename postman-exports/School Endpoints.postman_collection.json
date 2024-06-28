@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "c40954a5-80b1-4f51-8f38-975578aa8056",
+		"name": "School Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23616215"
+	},
+	"item": [
+		{
+			"name": "Add School",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var school_names = pm.environment.get(\"school_names\");",
+							"",
+							"if (!school_names) {",
+							"    school_names = [\"Eton College\", \"Harrow School\", \"Winchester College\", \"Rugby School\", \"Westminster School\", \"St. Paul's School\", \"Charterhouse School\", \"Marlborough College\", \"Bryanston School\", \"Cheltenham Ladies' College\", \"Brighton College\", \"Bedford School\", \"Bradfield College\", \"Canford School\", \"Downe House School\", \"Dulwich College\", \"Fettes College\", \"Haberdashers' Aske's Boys' School\", \"Highgate School\", \"Kellogg College, Oxford\", \"King's College School\", \"Latymer Upper School\", \"Millfield School\", \"Oundle School\", \"Pangbourne College\"];",
+							"}",
+							"",
+							"var current_school = school_names.shift();",
+							"",
+							"pm.environment.set(\"school_name\", current_school);",
+							"pm.environment.set(\"country_id\", Math.floor(Math.random() * 10) + 1)",
+							"",
+							"pm.environment.set(\"school_names\", school_names);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var companies = pm.environment.get(\"school_names\");",
+							"",
+							"if (companies && companies.length > 0) {",
+							"    postman.setNextRequest(pm.environment.get(\"base_url\") + \"/environment/school\");",
+							"} else {",
+							"    postman.setNextRequest(null);",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"{{school_name}}\",\n    \"country_id\": {{country_id}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/environment/school",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"environment",
+						"school"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get School",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/environment/school?id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"environment",
+						"school"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Schools",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/environment/school",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"environment",
+						"school"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit School",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"updated_school_name\",\n    \"country_id\":4,\n    \"image_path\": \"path to updated image\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/environment/school?id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"environment",
+						"school"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit School Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"updated_school_name\",\n    \"country_id\":4,\n    \"image_path\": \"path to updated image\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/environment/school?id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"environment",
+						"school"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "cbee8f9f-f4d2-4457-9d3d-9bb2c83d1746",
+		"name": "Announcement Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23616215"
+	},
+	"item": [
+		{
+			"name": "Add announcement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"test announcement\",\n    \"content\": \"This is a test announcement\",\n    \"allow_answers\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/announcements",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user announcements",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/user_announcements",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user_announcements"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Announcement",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/announcement/4a2bf129-fc6c-48fd-9f7a-bf26834a3ea1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"4a2bf129-fc6c-48fd-9f7a-bf26834a3ea1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add file to announcement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/bogdanciurea/Downloads/1F988B3EA7871EDD8EA32A6A5C8F48AA.pdf",
+							"disabled": true
+						},
+						{
+							"key": "file_name",
+							"value": "Test file name",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/announcement/307dea35-ec48-4e6c-93d9-c2e8c8182273/files",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"307dea35-ec48-4e6c-93d9-c2e8c8182273",
+						"files"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get File",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/announcement/307dea35-ec48-4e6c-93d9-c2e8c8182273/files?file_id=b5e98aa6-11b9-4364-92e7-2fd0fcc0605a",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"307dea35-ec48-4e6c-93d9-c2e8c8182273",
+						"files"
+					],
+					"query": [
+						{
+							"key": "file_id",
+							"value": "b5e98aa6-11b9-4364-92e7-2fd0fcc0605a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete File",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/announcement/307dea35-ec48-4e6c-93d9-c2e8c8182273/files?file_id=66a34714-79f4-4f9b-99a1-15bc517bba02",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"307dea35-ec48-4e6c-93d9-c2e8c8182273",
+						"files"
+					],
+					"query": [
+						{
+							"key": "file_id",
+							"value": "66a34714-79f4-4f9b-99a1-15bc517bba02"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add tags to announcement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tags\": [\"dc6eca9d-b9c4-46f7-a5e9-d74a5f6a11c3\", \"7a93c051-ae40-4f06-b7ae-5829197768aa\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/announcement/47cf8b86-3072-4596-a5cb-cd431a74499b/tags",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"47cf8b86-3072-4596-a5cb-cd431a74499b",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tags linked to announcement",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/announcement/307dea35-ec48-4e6c-93d9-c2e8c8182273/tags",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"307dea35-ec48-4e6c-93d9-c2e8c8182273",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove tags from announcement",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"tags\": [\"7a93c051-ae40-4f06-b7ae-5829197768aa\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/announcement/307dea35-ec48-4e6c-93d9-c2e8c8182273/tags",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"307dea35-ec48-4e6c-93d9-c2e8c8182273",
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add answer to announcement",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"This is the first test question\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/announcement/ea91bf65-12c6-447a-949e-fd3c9b53545d/answers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"ea91bf65-12c6-447a-949e-fd3c9b53545d",
+						"answers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove answer from announcement",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/announcement/354d7914-96b0-4866-a3a1-f63ad572287d/answers?answer_id=cfb991ec-bb91-4bc5-9048-89ae074c2bab",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"announcement",
+						"354d7914-96b0-4866-a3a1-f63ad572287d",
+						"answers"
+					],
+					"query": [
+						{
+							"key": "answer_id",
+							"value": "cfb991ec-bb91-4bc5-9048-89ae074c2bab"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "8891c5b7-f0af-479b-8c3a-7ef95e8fc2ab",
+		"name": "Todo Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23616215"
+	},
+	"item": [
+		{
+			"name": "Add todo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"test todo\",\n    \"type\":\"NOT_STARTED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/todos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/todos",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific Todo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"school_id\": 1,\n    \"token\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/todos/fd199ce6-8125-41c2-84a6-3649db0add1e",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todos",
+						"fd199ce6-8125-41c2-84a6-3649db0add1e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Todo",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\":\"DONE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/todos/1dc6d45e-4f2e-49a3-ab1c-d73e48ea172e",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"todos",
+						"1dc6d45e-4f2e-49a3-ab1c-d73e48ea172e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/todos/37636da5-caad-42c7-a094-9768d87d7403",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"todos",
+						"37636da5-caad-42c7-a094-9768d87d7403"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

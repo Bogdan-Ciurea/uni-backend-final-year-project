@@ -1,0 +1,617 @@
+{
+	"info": {
+		"_postman_id": "9a089479-32fa-4d1c-be66-0cf3ac08e02a",
+		"name": "Courses Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23616215"
+	},
+	"item": [
+		{
+			"name": "Create Course",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"course_2_test\",\n    \"start_date\": 1675537778,\n    \"end_date\": 1683227378\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/courses",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Course",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/12b6c323-2c55-4499-8d1a-08f79683781a/thumbnail",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"12b6c323-2c55-4499-8d1a-08f79683781a",
+						"thumbnail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users at Course",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Courses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/user_courses",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user_courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Course",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"test_course\",\n    \"start_date\": 1675537778,\n    \"end_date\": 1683227378\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/course/a849e1dd-94eb-49c9-aaf1-c82fd900337c",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"a849e1dd-94eb-49c9-aaf1-c82fd900337c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/efc17650-e020-4180-a266-f589a4035864",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"efc17650-e020-4180-a266-f589a4035864"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Thumbnail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "school_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "admin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/bogdanciurea/Downloads/history.jpg",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/bogdanciurea/Downloads/geography.jpeg"
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/bogdanciurea/Downloads/IMG_8019.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/course/575dea39-1e9e-450d-a37c-4a0fb5d967d1/thumbnail",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"575dea39-1e9e-450d-a37c-4a0fb5d967d1",
+						"thumbnail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Course Thumbnail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/thumbnail?user_token=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"thumbnail"
+					],
+					"query": [
+						{
+							"key": "user_token",
+							"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course Thumbnail",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/131acde4-a4c7-4d25-bb5e-dc72f7c9ce17/thumbnail",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"131acde4-a4c7-4d25-bb5e-dc72f7c9ce17",
+						"thumbnail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload File",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					},
+					{
+						"key": "file_name",
+						"value": "folder_test",
+						"type": "text"
+					},
+					{
+						"key": "students_can_add",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "visible_to_students",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "file_type",
+						"value": "FOLDER",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "file_type",
+						"value": "FILE",
+						"type": "text"
+					},
+					{
+						"key": "file_owner",
+						"value": "24d97719-385a-45c0-a5e2-c83fba6ccf65",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "school_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "admin",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/bogdanciurea/Downloads/Accounting.xlsx",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/bogdanciurea/Downloads/289940406_558572062493200_4113327924300535185_n.jpg"
+						},
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/bogdanciurea/Downloads/309018103_621517086137479_1009125644161407063_n.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/files",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Course Files",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/files",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Course File",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/files?file_id=16ffc026-f99a-4593-ae65-f398b942d7ee",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"files"
+					],
+					"query": [
+						{
+							"key": "file_id",
+							"value": "16ffc026-f99a-4593-ae65-f398b942d7ee"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Course Files",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/files?file_id=2f27ed3c-1584-401b-a807-96248a11f5e7",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"files"
+					],
+					"query": [
+						{
+							"key": "file_id",
+							"value": "2f27ed3c-1584-401b-a807-96248a11f5e7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"This is the first question\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/questions",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get questions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/questions",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete question",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/questions/db433c3c-6078-4b69-bbdb-fe89c603fb74",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"questions",
+						"db433c3c-6078-4b69-bbdb-fe89c603fb74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create answer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\": \"This is the first question\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/questions/832c2b93-b63e-4ef8-9c8b-d6bd3b994fa4/answers",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"questions",
+						"832c2b93-b63e-4ef8-9c8b-d6bd3b994fa4",
+						"answers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Answer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"users_id\" : [\n        \"99502675-9745-489e-b233-95d799ae26b4\"\n    ],\n    \"tags_id\" : [\n        \"7a93c051-ae40-4f06-b7ae-5829197768aa\"\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/course/bb01919a-4464-4505-90b9-13e77d173a94/questions/0784c9f8-1773-48bb-a48b-e8ff65091d66/answers/739d1558-f588-4c75-92f2-7af51789c466",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"bb01919a-4464-4505-90b9-13e77d173a94",
+						"questions",
+						"0784c9f8-1773-48bb-a48b-e8ff65091d66",
+						"answers",
+						"739d1558-f588-4c75-92f2-7af51789c466"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

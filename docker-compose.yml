@@ -1,0 +1,78 @@
+version: "3.3"
+
+services:
+
+  cass-main:
+    image: cassandra:latest
+    container_name: cass-main
+    mem_limit: 2g
+    healthcheck:
+        test: ["CMD", "cqlsh", "-e", "describe keyspaces" ]
+        interval: 5s
+        timeout: 5s
+        retries: 60
+    ports:
+      - "127.0.0.1:9042:9042"
+    expose:
+      - "7000"
+      - "7001"
+      - "7199"
+      - "9042"
+      - "9160"
+
+    
+    volumes:
+      - ./data/cass-main:/var/lib/cassandra
+    environment:
+      - CASSANDRA_SEEDS=cass-main,cass-child-1,cass-child-2
+      - CASSANDRA_CLUSTER_NAME=docker-cluster
+    restart: always
+
+  cass-child-1:
+    image: cassandra:latest
+    container_name: cass-child-1
+    mem_limit: 2g
+    healthcheck:
+        test: ["CMD", "cqlsh", "-e", "describe keyspaces" ]
+        interval: 5s
+        timeout: 5s
+        retries: 60
+    volumes:
+      - ./data/cass-child-1:/var/lib/cassandra
+    environment:
+      - CASSANDRA_SEEDS=cass-main,cass-child-1,cass-child-2
+      - CASSANDRA_CLUSTER_NAME=docker-cluster
+    depends_on:
+      - cass-main
+    expose:
+      - "7000"
+      - "7001"
+      - "7199"
+      - "9042"
+      - "9160"
+    restart: always
+    
+
+  cass-child-2:
+    image: cassandra:latest
+    container_name: cass-child-2
+    mem_limit: 2g
+    healthcheck:
+        test: ["CMD", "cqlsh", "-e", "describe keyspaces" ]
+        interval: 5s
+        timeout: 5s
+        retries: 60
+    volumes:
+      - ./data/cass-child-2:/var/lib/cassandra
+    environment:
+      - CASSANDRA_SEEDS=cass-main,cass-child-1,cass-child-2
+      - CASSANDRA_CLUSTER_NAME=docker-cluster
+    depends_on:
+      - cass-main
+    expose:
+      - "7000"
+      - "7001"
+      - "7199"
+      - "9042"
+      - "9160"
+    restart: always

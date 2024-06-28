@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "6551f0d1-050b-4576-817a-1d02b26fd1f1",
+		"name": "Holiday Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23616215"
+	},
+	"item": [
+		{
+			"name": "Create Holiday",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\":1673481600\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/environment/holidays?school_id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"environment",
+						"holidays"
+					],
+					"query": [
+						{
+							"key": "school_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Holidays",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/environment/holidays?school_id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"environment",
+						"holidays"
+					],
+					"query": [
+						{
+							"key": "school_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Holiday",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\":1674649915\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/environment/holidays?school_id=1&date=1674649915",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"environment",
+						"holidays"
+					],
+					"query": [
+						{
+							"key": "school_id",
+							"value": "1"
+						},
+						{
+							"key": "date",
+							"value": "1674649915"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

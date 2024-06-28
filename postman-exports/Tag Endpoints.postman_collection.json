@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "d3d77a44-b34d-45e7-a091-9aa1a5fb44e3",
+		"name": "Tag Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23616215"
+	},
+	"item": [
+		{
+			"name": "Create Tag",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"comp-soc\",\n    \"colour\": \"messenger\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/tags",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tags",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"school_id\": 1,\n    \"token\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/tags",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Tag",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/tags/7a93c051-ae40-4f06-b7ae-5829197768aa",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags",
+						"7a93c051-ae40-4f06-b7ae-5829197768aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Tag",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"comp-soc\",\n    \"colour\": \"red\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/tags/7a93c051-ae40-4f06-b7ae-5829197768aa",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags",
+						"7a93c051-ae40-4f06-b7ae-5829197768aa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tag",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/tags/1ebafaed-db83-4588-af15-a7e2bddf4b8d",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags",
+						"1ebafaed-db83-4588-af15-a7e2bddf4b8d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tag User Relationship",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/tags/6d4cce91-73f0-43ff-a64a-4662c9d0aac0/add_user?user_id=e95bea50-a4be-11ed-abc9-fdd85ca31eeb",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags",
+						"6d4cce91-73f0-43ff-a64a-4662c9d0aac0",
+						"add_user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "e95bea50-a4be-11ed-abc9-fdd85ca31eeb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users of tag",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/tags/dc6eca9d-b9c4-46f7-a5e9-d74a5f6a11c3/users",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags",
+						"dc6eca9d-b9c4-46f7-a5e9-d74a5f6a11c3",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get personal tags",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/tags/personal_tags?user_id=68a86e9c-3ae6-40e7-97bb-8d72b6758189",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags",
+						"personal_tags"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "68a86e9c-3ae6-40e7-97bb-8d72b6758189"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Tag User Relationship",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODUzOTE3MTcsImlhdCI6MTY3NzYxNTcxNywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJEQ2JuU1FEZWhKSTBPVjM3dEZjOEMwMjNNNG1cdTAwMDBXMXM2In0.WoSx9L6Ct78beG69VCmblwPl7sE9tl-tV0K7g8Aj30Y",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/tags/6d4cce91-73f0-43ff-a64a-4662c9d0aac0/remove_user?user_id=e95bea50-a4be-11ed-abc9-fdd85ca31eeb",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"tags",
+						"6d4cce91-73f0-43ff-a64a-4662c9d0aac0",
+						"remove_user"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "e95bea50-a4be-11ed-abc9-fdd85ca31eeb"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

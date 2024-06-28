@@ -1,0 +1,8 @@
+/build
+/.vscode
+/certificates/*
+!/certificates/server.crt
+!/certificates/server.key
+!/certificates/jwt_priv_key.pem
+!/certificates/jwt_pub_key.pem
+/data

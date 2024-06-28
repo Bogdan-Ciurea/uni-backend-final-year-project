@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "337528e0-2da6-4a8c-ba79-8349f89b6b6f",
+		"name": "Grade Endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23616215"
+	},
+	"item": [
+		{
+			"name": "Create Grade",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"course_id\": \"b93668aa-8035-43da-b571-ef662c134125\",\n    \"user_id\": \"68a86e9c-3ae6-40e7-97bb-8d72b6758189\",\n    \"grade\": 10,\n    \"out_of\": 10,\n    \"weight\": \"0.7000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/grades",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"grades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Personal Grades",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/grades",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"grades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Grades",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/user/09a7367b-0375-4a34-b2b6-889d41b82c1c/grades",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"user",
+						"09a7367b-0375-4a34-b2b6-889d41b82c1c",
+						"grades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Course Grades",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/course/b93668aa-8035-43da-b571-ef662c134125/grades",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"course",
+						"b93668aa-8035-43da-b571-ef662c134125",
+						"grades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Grade",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"grade\": 5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/grades/3fb6e332-0ab7-4ac5-877e-decc8de46f9e",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"grades",
+						"3fb6e332-0ab7-4ac5-877e-decc8de46f9e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Grade Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2ODg4MzcyMTMsImlhdCI6MTY4MTA2MTIxMywiaXNzIjoiYXV0aDAiLCJqdGkiOiJyc2EtY3JlYXRlLWV4YW1wbGUiLCJzY2hvb2xfaWQiOiIxIiwidG9rZW4iOiJSU0tCWUZjVllMelFpSUFWTkdUU0dPa0Q5RW1GRzd3QiJ9.thSrCiAAybuS4PzghtkPgkuc8mcTZePsTEbB1C31p48",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/grades/288eb42e-aab4-44ea-ac2c-2f5a898a4a67",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"grades",
+						"288eb42e-aab4-44ea-ac2c-2f5a898a4a67"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

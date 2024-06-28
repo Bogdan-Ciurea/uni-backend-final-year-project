@@ -1,0 +1,6 @@
+school,id,created_at,allow_answers,content,created_by,files,title
+1,307dea35-ec48-4e6c-93d9-c2e8c8182273,2023-02-26 13:05:39.000+0000,False,This is a test announcement,e9214c60-ab8f-11ed-ac97-61ba4170d016,,test announcement
+1,cedcaa65-846d-40f5-92ba-bca7603dc579,2023-04-19 09:23:51.000+0000,False,"hello, this announcement is a test",e9214c60-ab8f-11ed-ac97-61ba4170d016,,announcement for all
+1,e1fcd796-4cd3-4c40-a252-1ebc2b4d99bc,2023-04-19 09:37:07.000+0000,True,test for allowing answers,e9214c60-ab8f-11ed-ac97-61ba4170d016,,allow answers test
+1,1992ca64-6c2a-4050-bd0b-d16edc43f469,2023-04-12 08:20:28.000+0000,True,The content is not important,e9214c60-ab8f-11ed-ac97-61ba4170d016,,test_announcement_2
+1,2a393752-7d0a-42ec-ab4c-9d2ff0acb991,2023-04-20 19:38:03.000+0000,True,this is an announcement that can be seen only by tag 4.,e9214c60-ab8f-11ed-ac97-61ba4170d016,,Tag 4 announcement

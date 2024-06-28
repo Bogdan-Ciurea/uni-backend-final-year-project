@@ -1,0 +1,21 @@
+[submodule "modules/drogon"]
+	path = modules/drogon
+	url = https://github.com/drogonframework/drogon.git
+	branch = v1.8.0
+[submodule "modules/cassandra"]
+	path = modules/cassandra
+	url = https://github.com/datastax/cpp-driver.git
+	branch = 2.16.0
+[submodule "modules/googletest"]
+	path = modules/googletest
+	url = https://github.com/google/googletest.git
+	branch = release-1.11.0
+[submodule "modules/SMTPMail-drogon"]
+	path = modules/SMTPMail-drogon
+	url = https://github.com/ihmc3jn09hk/SMTPMail-drogon.git
+[submodule "modules/bcrypt"]
+	path = modules/bcrypt
+	url = https://github.com/hilch/Bcrypt.cpp.git
+[submodule "modules/jwt-cpp"]
+	path = modules/jwt-cpp
+	url = https://github.com/Thalhammer/jwt-cpp.git
